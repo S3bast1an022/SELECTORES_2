@@ -1,0 +1,72 @@
+
+
+a {
+  color: blue;
+  background-color: rgb(255, 136, 0);
+  border: 2px solid rgb(0,0,0); /* SOLID INDICA QUE SERA UNA LINEA CONTINUA */
+  border-radius: 8px;
+  display: inline-block; /* ME AYUDA A DARLE PROPIEDADES DE ALTURA O ANCHO A UN "CUADRO" SIN FORZAR UN SALTO
+                            DE LINEA */
+  padding: 20px 50px; /* EL PRIMERO ES PARA LA ALTRA Y EL SEGUNDO PARA EL ANCHO */
+  text-decoration:none ; /* LE QUITA EL GUION BAJO AL LINK */
+  font-weight: bold; /* PONER NEGRILLA LA FUENTE */
+}
+
+
+/* --- LA ETIQUETA FOCUS SE VE EL CAMBIO CUANDO DAMOS CLIC MIENTRAS QUE LA ETIQUETA HOVER SE VE EL 
+CAMBIO CUANDO PASAMOS EL CURSOR SOBRE EL OBJETO EN ESTE CASO EL LINK --- */
+a:focus {
+  text-decoration: underline; /* LE PONE EL GUION BAJO AL LINK */
+  border: 2px solid #007BFF;
+  background-color: #e0f0ff;
+}
+
+/* 3. Resaltar el primer y último enlace (:first-child y :last-child) */
+/* Objetivo: Cambiar el fondo o color para diferenciarlos */
+
+li:first-child a {
+  background-color: #d1e7dd;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+li:last-child a {
+  background-color: #f8d7da;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+
+/* PARA QUE CUANDO PASE EL CURSO APAREZCA ALGO */
+a:hover::after {
+  content: "🔥🔥"; /* COMO TIENE EL AFTER EL MENSAJE SE VE DESPUES */
+  color: #007BFF;
+  margin-left: 5px; /* AUMENTA LA MARGEN */
+}
+
+
+
+a::first-letter {
+  font-size: 1.5em;
+  color: #000000;
+  font-weight: bold;
+}
+
+
+/* ETIQUETA PARA IMPARES */
+li:nth-child(odd) a {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ETIQUETA PARA PARES */
+li:nth-child(even) a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a:hover {
+  transform: scale(1.5) translateX(20px) translateY(2px); 
+  box-shadow: 0 8px 20px rgb(255, 0, 0); /* LE DA UNA SOMBRA A LA CAJA */
+  /* EL 0 LE DA EL EFECTO DE DIFUMINAR */
+  /* EL 8 LE DA COMO LA INTENSIDAD */
+  /* EL 50 LE DA COMO CUANDO SE ABRIRA LA SOMBRA */
+}
